@@ -9,3 +9,9 @@ def read_raw_aarc_data(
 ):
     return pd.read_csv(file_path)\
         .convert_dtypes()
+
+def write_raw_aarc_data(
+        df: pd.DataFrame,
+        file_path: str = FILE_DATA_RAW
+):
+    df.to_csv(file_path, index=False)
